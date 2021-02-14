@@ -5,17 +5,10 @@ export default class Animation{
 
         this._planets = document.getElementsByClassName('dots');
         this._planets = [...this._planets];
-        //console.log(this._planets);
 
         this._scaleBtn = document.querySelector('#scale-button');
-        //console.log(this._scaleBtn);
-
         this._positionBtn = document.querySelector('#position-button');
-        //console.log(this._positionBtn);
-
         this._stopBtn = document.querySelector('#stop-button');
-        //console.log(this._stopBtn);
-
         this._tl = gsap.timeline();
     }
 
@@ -42,7 +35,7 @@ export default class Animation{
 
             this._tl.restart().clear(true).to(this._planets,
                 {
-                    id: 'positionStgger',
+                    id: 'positionStagger',
                     y: -50,
                     yoyo: true,
                     repeat: -1,
